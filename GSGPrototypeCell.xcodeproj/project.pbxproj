@@ -15,6 +15,7 @@
 		D714B1731E6FFD78008CC619 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D714B1711E6FFD78008CC619 /* LaunchScreen.storyboard */; };
 		D714B17E1E6FFD78008CC619 /* GSGPrototypeCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D714B17D1E6FFD78008CC619 /* GSGPrototypeCellTests.m */; };
 		D714B1891E6FFD78008CC619 /* GSGPrototypeCellUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D714B1881E6FFD78008CC619 /* GSGPrototypeCellUITests.m */; };
+		D714B1981E6FFF29008CC619 /* GSGCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D714B1971E6FFF29008CC619 /* GSGCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		D714B1841E6FFD78008CC619 /* GSGPrototypeCellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GSGPrototypeCellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D714B1881E6FFD78008CC619 /* GSGPrototypeCellUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSGPrototypeCellUITests.m; sourceTree = "<group>"; };
 		D714B18A1E6FFD78008CC619 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D714B1961E6FFF29008CC619 /* GSGCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GSGCell.h; path = ../GSGCell.h; sourceTree = "<group>"; };
+		D714B1971E6FFF29008CC619 /* GSGCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GSGCell.m; path = ../GSGCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				D714B1671E6FFD78008CC619 /* AppDelegate.m */,
 				D714B1691E6FFD78008CC619 /* ViewController.h */,
 				D714B16A1E6FFD78008CC619 /* ViewController.m */,
+				D714B1961E6FFF29008CC619 /* GSGCell.h */,
+				D714B1971E6FFF29008CC619 /* GSGCell.m */,
 				D714B16C1E6FFD78008CC619 /* Main.storyboard */,
 				D714B16F1E6FFD78008CC619 /* Assets.xcassets */,
 				D714B1711E6FFD78008CC619 /* LaunchScreen.storyboard */,
@@ -277,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D714B16B1E6FFD78008CC619 /* ViewController.m in Sources */,
+				D714B1981E6FFF29008CC619 /* GSGCell.m in Sources */,
 				D714B1681E6FFD78008CC619 /* AppDelegate.m in Sources */,
 				D714B1651E6FFD78008CC619 /* main.m in Sources */,
 			);

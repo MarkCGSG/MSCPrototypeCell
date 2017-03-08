@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GSGCell.h"
 
 @interface ViewController : UIViewController
+
+//IMPORTED OBJECTS
+@property (strong, nonatomic) GSGCell* myCell;
 
 
 @end

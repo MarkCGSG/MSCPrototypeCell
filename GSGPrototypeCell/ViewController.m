@@ -16,7 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    //initialise a shape
+    [self createCellCentredOnSuperViewCoordinate:CGPointMake(self.view.center.x, self.view.center.y)];
+
+    
 }
 
 
@@ -24,6 +28,23 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+-(void)createCellCentredOnSuperViewCoordinate : (CGPoint) superViewCoordinate {
+    
+    self.myCell = [[GSGCell alloc]init];
+    self.myCell.frame = self.myCell.boundingBox;
+    self.myCell.center = superViewCoordinate;
+    self.myCell.cellTitle.hidden = NO;
+
+    [self.view addSubview:self.myCell];
+
+    
+}
+
+
+
 
 
 @end
