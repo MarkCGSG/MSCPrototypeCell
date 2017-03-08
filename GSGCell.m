@@ -16,9 +16,6 @@
 
 -(id) initWithFrame:(CGRect) unitFrame {
     
-    NSLog(@"0. INIT WITH FRAME CALL");
-    
-    
     self = [super initWithFrame:unitFrame];
     
     if(self)
@@ -36,10 +33,8 @@
 
 -(void) initialiseCellPath {
     
-    NSLog(@"0. INITIALISE UNIT SHAPE 1");
-    
-    // 1. initialise an array of CGPoints from Data, around passed in Central Point, set as the centre of the view - OPTIMISE CGPOINTZERO
-    NSMutableArray* arrayOfPointsFromData = [[self initialiseUnitShapeWithArrayOfPointsAroundCentrePoint:CGPointZero] mutableCopy];
+    // 1. initialise an array of CGPoints from Data, around passed in Central Point, set as the centre of the view
+    NSMutableArray* arrayOfPointsFromData = [[self initialiseCellWithArrayOfPointsAroundCentrePoint:CGPointZero] mutableCopy];
     
     // 2. initialise a bezier curve to be drawn:
     UIBezierPath* anOutlinePath = [self interpolateHermiteCurveFromArrayOfCGPoints:arrayOfPointsFromData closed:YES];
@@ -51,7 +46,7 @@
     self.shapeOriginPointInView = [self createNewOriginPoint:self.boundingBox];
     
     // 5. Initialise the array of CGPoints For the Path around the new Central Point
-    self.arrayOfMasterControlPointsForPath = [[self initialiseUnitShapeWithArrayOfPointsAroundCentrePoint:self.shapeOriginPointInView] mutableCopy];
+    self.arrayOfMasterControlPointsForPath = [[self initialiseCellWithArrayOfPointsAroundCentrePoint:self.shapeOriginPointInView] mutableCopy];
     
     // 6. Initialise the bezier curve to be drawn:
     self.path = [self interpolateHermiteCurveFromArrayOfCGPoints:self.arrayOfMasterControlPointsForPath closed:YES];
@@ -157,7 +152,7 @@
     return path;
 }
 
--(NSArray*) initialiseUnitShapeWithArrayOfPointsAroundCentrePoint: (CGPoint) p {
+-(NSArray*) initialiseCellWithArrayOfPointsAroundCentrePoint: (CGPoint) p {
     
     
     NSMutableArray* arrayOfPoints = [@[]mutableCopy];
@@ -224,12 +219,10 @@
 
 }
 
-
 -(CGPoint) rectGetCenter:(CGRect) rect {
     
     return CGPointMake(CGRectGetMidX(rect), CGRectGetMidY(rect));
 }
-
 
 -(void) drawRectBoundary:(CGRect)rect {
     
@@ -242,7 +235,6 @@
 
     
 }
-
 
 - (void)drawRect:(CGRect)rect {
     
